@@ -24,7 +24,7 @@ export default function CompanyPage() {
       const dashData = JSON.parse(sessionStorage.getItem('dashboardData') || '{}');
       const connected = dashData.connected || {};
 
-      const response = await fetch('http://localhost:3000/api/company-detail', {
+      const response = await fetch('https://placemint-backend-02uy.onrender.com/api/company-detail', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
