@@ -3,7 +3,10 @@ const axios  = require('axios');
 
 router.get('/:username', async (req, res) => {
   try {
-    const h = { 'User-Agent': 'PlaceMint' };
+   const h = { 
+  'User-Agent': 'PlaceMint',
+  'Authorization': `token ${process.env.GITHUB_TOKEN}`
+};
     const [u, r] = await Promise.all([
       axios.get(`https://api.github.com/users/${req.params.username}`, { headers: h }),
       axios.get(`https://api.github.com/users/${req.params.username}/repos?per_page=100&sort=updated`, { headers: h }),
