@@ -5,15 +5,10 @@ router.get('/:username', async (req, res) => {
   try {
     const { username } = req.params;
     
-    // Unofficial LeetCode stats API
     const { data } = await axios.get(
-      `https://leetcode-stats-api.herokuapp.com/${username}`,
-      { timeout: 10000 }
+      `https://alfa-leetcode-api.onrender.com/${username}`,
+      { timeout: 15000 }
     );
-
-    if (data.status === 'error') {
-      return res.status(404).json({ error: 'User not found' });
-    }
 
     res.json({
       total:   data.totalSolved   || 0,
