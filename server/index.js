@@ -5,7 +5,11 @@ const mongoose = require('mongoose');
 
 const app = express();
 app.use(cors({ 
-  origin: ['http://localhost:5173', 'https://placemint-eight.vercel.app'],
+  origin: [
+    'http://localhost:5173', 
+    'https://placemint-eight.vercel.app',
+    'https://placemint-gules.vercel.app'
+  ],
   credentials: true 
 }));
 app.use(express.json({ limit: '10mb' }));
