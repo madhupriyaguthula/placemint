@@ -21,9 +21,14 @@ export function AuthProvider({ children }) {
   }, []);
 
   const loginUser = (token, userData) => {
-    localStorage.setItem('token', token);
-    setUser(userData);
-  };
+  localStorage.setItem('token', token);
+  setUser(userData);
+  
+  // Auto logout after 24 hours
+  setTimeout(() => {
+    logoutUser();
+  },  60 * 60 * 1000);
+};
 
   const logoutUser = () => {
     localStorage.removeItem('token');
