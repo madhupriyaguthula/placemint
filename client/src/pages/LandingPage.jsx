@@ -177,7 +177,7 @@ export default function LandingPage() {
       {/* Footer */}
       <div style={{
         textAlign: 'center', padding: '1.5rem',
-        borderTop: '1px solid #6A8F6A',
+        borderTop: '1px solid #8c908c',
         fontSize: '13px', color: '#2C3B1E',
         background: '#7A9E7A'
       }}>
