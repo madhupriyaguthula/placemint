@@ -140,7 +140,7 @@ export default function InputPage() {
         </div>
       </nav>
 
-      <div style={{ maxWidth: '720px', margin: '0 auto', padding: '2rem 1.5rem' }}>
+      <div style={{ maxWidth: '720px', margin: '0 auto', padding: '2rem 1.5rem' }} className="fade-in">
 
         <h1 style={{ fontSize: '22px', fontWeight: 800, marginBottom: '4px', color: '#15210c' }}>Setup your profile</h1>
 <p style={{ fontSize: '13px', color: '#000000', marginBottom: '2rem' }}>

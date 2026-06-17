@@ -43,7 +43,7 @@ export default function DashboardPage() {
         </div>
       </nav>
 
-      <div style={{ maxWidth: '900px', margin: '0 auto', padding: '2rem 1.5rem' }}>
+      <div style={{ maxWidth: '900px', margin: '0 auto', padding: '2rem 1.5rem' }} className="fade-in">
 
         {/* Header */}
         <div style={{ marginBottom: '2rem' }}>

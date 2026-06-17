@@ -38,6 +38,7 @@ export default function AuthPage() {
       padding: '1rem', fontFamily: 'Outfit, sans-serif'
     }}>
       <div style={{ width: '100%', maxWidth: '420px' }}>
+      <div className="fade-in" style={{ width: '100%', maxWidth: '420px' }}></div>
 
         {/* Logo */}
         <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
