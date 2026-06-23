@@ -2,7 +2,7 @@ require('dotenv').config();
 const express  = require('express');
 const cors     = require('cors');
 const mongoose = require('mongoose');
-
+const chatRoutes = require('./routes/chat');
 const app = express();
 app.use(cors({ 
   origin: [
@@ -28,6 +28,6 @@ app.use('/api/codechef', require('./routes/codechef'));
 app.use('/api/analyze',  require('./routes/analyze'));
 app.use('/api/company-detail', require('./routes/company-detail'));
 app.get('/', (req, res) => res.send('PlaceMint API running!'));
-
+app.use('/api/chat', chatRoutes);
 app.listen(process.env.PORT || 3000, () =>
   console.log(`Server running on port ${process.env.PORT || 3000}`));
