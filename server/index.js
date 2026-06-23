@@ -7,8 +7,8 @@ const app = express();
 app.use(cors({ 
   origin: [
     'http://localhost:5173', 
-    'https://placemint-gules.vercel.app',
-    'https://melodious-faloodeh-788799.netlify.app'
+    'https://melodious-faloodeh-788799.netlify.app',
+    'https://placemint-analyzer.netlify.app'
   ],
   credentials: true 
 }));
