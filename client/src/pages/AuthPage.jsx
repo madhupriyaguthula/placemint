@@ -18,7 +18,7 @@ export default function AuthPage() {
     setError('');
     if (!form.email || !form.password) return setError('Fill all fields');
     if (!isLogin && !form.name) return setError('Enter your name');
-     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+     const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
   if (!emailRegex.test(form.email)) return setError('Please enter a valid email address');
   if (!isLogin && form.password.length < 6) return setError('Password must be at least 6 characters');
     setLoading(true);
