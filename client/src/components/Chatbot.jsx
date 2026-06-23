@@ -55,22 +55,29 @@ export default function Chatbot() {
     <>
       {/* Floating bubble */}
       <button
-        onClick={() => setOpen(!open)}
-        style={{
-          position: 'fixed', bottom: '24px', right: '24px',
-          width: '56px', height: '56px', borderRadius: '50%',
-          background: '#1E2A14', color: '#A8C898',
-          border: 'none', cursor: 'pointer', zIndex: 999,
-          fontSize: '24px', boxShadow: '0 4px 20px rgba(0,0,0,0.25)',
-          display: 'flex', alignItems: 'center', justifyContent: 'center',
-          transition: 'transform 0.2s ease',
-          fontFamily: 'Outfit, sans-serif'
-        }}
-        onMouseEnter={e => e.target.style.transform = 'scale(1.1)'}
-        onMouseLeave={e => e.target.style.transform = 'scale(1)'}
-      >
-        {open ? '✕' : '💬'}
-      </button>
+  title="🤖Need help? Ask me!"
+  onClick={() => setOpen(!open)}
+  style={{
+    position: 'fixed',
+    bottom: '24px',
+    right: '24px',
+    width: '56px',
+    height: '56px',
+    borderRadius: '50%',
+    background: '#1E2A14',
+    color: '#A8C898',
+    border: 'none',
+    cursor: 'pointer',
+    zIndex: 999,
+    fontSize: '24px',
+    boxShadow: '0 4px 20px rgba(0,0,0,0.25)',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center'
+  }}
+>
+  {open ? '✕' : '💬'}
+</button>
 
       {/* Chat window */}
       {open && (
