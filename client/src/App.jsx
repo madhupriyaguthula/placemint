@@ -6,7 +6,7 @@ import LandingPage     from './pages/LandingPage';
 import AuthPage        from './pages/AuthPage';
 import InputPage       from './pages/InputPage';
 import DashboardPage   from './pages/DashboardPage';
-
+import Chatbot from './components/Chatbot';
 export default function App() {
   return (
     <AuthProvider>
@@ -18,6 +18,7 @@ export default function App() {
           <Route path="/dashboard" element={<ProtectedRoute><DashboardPage /></ProtectedRoute>} />
           <Route path="/company" element={<ProtectedRoute><CompanyPage /></ProtectedRoute>} />
         </Routes>
+        <Chatbot />
       </BrowserRouter>
     </AuthProvider>
   );
